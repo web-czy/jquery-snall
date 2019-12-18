@@ -1,0 +1,55 @@
+.header {
+  padding: 0.3rem 0.4rem 0 0.4rem;
+  width: 7.5rem;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.header .index-banner {
+  width: 6.7rem;
+  height: 2.4rem;
+}
+
+.header .index-banner img {
+  width: 6.7rem;
+  height: 2.4rem;
+}
+
+.banner .swiper-slide {
+  height: auto;
+}
+
+.banner .swiper-pagination {
+  bottom: 20px !important;
+}
+
+.banner .swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  margin: 0 6px !important;
+}
+
+.banner .swiper-pagination-bullet-active {
+  background: #dd0103;
+}
+
+.header .index-nav {
+  padding: 0.4rem 0.13rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.header .index-nav .nav-li .nav-img {
+  display: block;
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.header .index-nav .nav-li .title {
+  margin-top: 0.15rem;
+  line-height: 0.33rem;
+  font-size: 0.24rem;
+}
