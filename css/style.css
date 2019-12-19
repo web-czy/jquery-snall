@@ -2,7 +2,8 @@ html {
   background: rgba(246, 249, 253, 1);
 }
 body {
-  color: #101d37;
+  position: relative;
+  color: rgba(16, 29, 55, 1);
   font-family: 'Microsoft YaHei', SimSun, SimHei, 'STHeiti Light', STHeiti,
     'Lucida Grande', Tahoma, Arial, Helvetica, sans-serif;
 }
@@ -129,6 +130,54 @@ h6 {
   background: #fff;
 }
 
+.white-router {
+  height: 1.14rem;
+}
+
+.snail-router {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 1.14rem;
+  color: rgba(16, 29, 55, 1);
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 -0.01rem 0.04rem 0 rgba(224, 224, 224, 1);
+  border-radius: 0.01rem;
+  -webkit-border-radius: 0.01rem;
+  -moz-border-radius: 0.01rem;
+  -ms-border-radius: 0.01rem;
+  -o-border-radius: 0.01rem;
+  z-index: 99;
+}
+
+.snail-router .li {
+  width: 0.6rem;
+  text-align: center;
+}
+
+.snail-router .li.choose {
+  color: rgba(246, 98, 108, 1);
+}
+
+.snail-router .li .icon,
+.snail-router .li .icon img {
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+}
+
+.snail-router .li .text {
+  margin-top: 0.05rem;
+  line-height: 0.28rem;
+  font-size: 0.2rem;
+}
+
+/* index-title */
 .index-title {
   padding-bottom: 0.1rem;
   display: flex;
@@ -321,18 +370,31 @@ h6 {
   -o-border-radius: 0.19rem;
 }
 
-.bookbox-list {
+.bookbox-con {
+  padding: 0.4rem 0 0.4rem 0.4rem;
+}
+
+.bookbox-wrapper {
+  padding-top: 0.3rem;
   width: 100%;
-  height: 6.54rem;
+  height: 6.6rem;
+  overflow: hidden;
+}
+
+.bookbox-list {
+  width: 16.67rem;
+  height: 6.6rem;
+  white-space: nowrap;
+  font-size: 0;
 }
 
 .bookbox-list .li {
-  margin-right: 32rem;
-  display: flex;
-  align-items: center;
+  display: inline-block;
+  margin-right: 0.32rem;
+  width: 5.2rem;
+  height: 6.54rem;
   border: 0.01rem solid rgba(209, 209, 209, 1);
   border-radius: 0.1rem 0.1rem 0 0;
-  box-sizing: border-box;
   -webkit-border-radius: 0.1rem 0.1rem 0 0;
   -moz-border-radius: 0.1rem 0.1rem 0 0;
   -ms-border-radius: 0.1rem 0.1rem 0 0;
@@ -341,25 +403,23 @@ h6 {
 
 .bookbox-list .cover {
   position: relative;
-  display: block;
-  width: 1.68rem;
-  height: 2.1rem;
+  width: 5.2rem;
+  height: 4.3rem;
   background: rgba(245, 245, 248, 1);
-  border-radius: 0.04rem;
-  /* overflow: hidden; */
-  -webkit-border-radius: 0.04rem;
-  -moz-border-radius: 0.04rem;
-  -ms-border-radius: 0.04rem;
-  -o-border-radius: 0.04rem;
+  overflow: hidden;
+  border-radius: 0.1rem 0.1rem 0 0;
+  -webkit-border-radius: 0.1rem 0.1rem 0 0;
+  -moz-border-radius: 0.1rem 0.1rem 0 0;
+  -ms-border-radius: 0.1rem 0.1rem 0 0;
+  -o-border-radius: 0.1rem 0.1rem 0 0;
 }
 
-.bookbox-list .cover img {
-  width: 1.68rem;
-  height: 2.1rem;
-  border-radius: 0.04rem;
+.bookbox-list .cover > img {
+  width: 5.2rem;
+  height: 4.3rem;
 }
 
-.new {
+.bookbox-list .cover .new {
   position: absolute;
   top: 0;
   right: 0;
@@ -367,23 +427,10 @@ h6 {
   height: 0.44rem;
 }
 
-.new img {
+.bookbox-list .cover .new img {
+  display: block;
   width: 0.97rem;
   height: 0.44rem;
-}
-
-.bookbox-list .cover .line {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0.1rem;
-  height: 2.1rem;
-  background: linear-gradient(
-    270deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  opacity: 0.4;
 }
 
 .bookbox-list .intro {
@@ -396,6 +443,7 @@ h6 {
   line-height: 0.42rem;
   font-size: 0.3rem;
   text-overflow: ellipsis;
+  white-space: pre-wrap;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;

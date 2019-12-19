@@ -5,32 +5,62 @@
   <meta charset="UTF-8">
   <meta name="divport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>蜗牛英语</title>
-  <link type="text/css" rel="stylesheet" href="css/style.css">
-  <link type="text/css" rel="stylesheet" href="css/index.css">
+  <title>首页</title>
   <link rel="stylesheet" type="text/css" href="css/animate.min.css">
   <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/index.css">
   <script src="js/jquery-1.11.3.min.js"></script>
-  <script>
-    function mobile() {
-      var winwidth = "";
-      var htmlsize = document.getElementsByTagName("html")[0];
-      first();
-
-      function first() {
-        winwidth = document.documentElement.offsetWidth;
-        htmlsize.style.fontSize = winwidth / 7.5 + "px";
-      }
-      window.onresize = function () {
-        first();
-      }
-    }
-    mobile();
-  </script>
+  <script src="js/script.js"></script>
+  <script src="js/index.js"></script>
 </head>
 
 <body>
+
+  <!-- 底部菜单 -->
+  <div class="snail-router">
+    <div class="li choose">
+      <div class="icon">
+        <img src="images/tab/home_choose.png">
+      </div>
+      <div class="text">首页</div>
+    </div>
+    <div class="li">
+      <div class="icon">
+        <img src="images/tab/community.png">
+      </div>
+      <div class="text">社区</div>
+    </div>
+    <div class="li">
+      <div class="icon">
+        <img src="images/tab/mine.png">
+      </div>
+      <div class="text">记录</div>
+    </div>
+    <div class="li">
+      <div class="icon">
+        <img src="images/tab/VIPicon.png">
+      </div>
+      <div class="text">会员</div>
+    </div>
+    <div class="li">
+      <div class="icon">
+        <img src="images/tab/more.png">
+      </div>
+      <div class="text">我的</div>
+    </div>
+  </div>
+
+  <div class="top">
+    <div class="sweep-code">
+      <i class="iconfont icon-book_bar_code"></i>
+    </div>
+    <div class="search">
+      <i class="iconfont icon-search"></i>
+      <span>读前搜一搜</span>
+    </div>
+  </div>
 
   <div class="header">
     <div class="index-banner">
@@ -129,31 +159,82 @@
     </div>
   </div>
 
-  <div class="container">
+  <!-- 启蒙书盒 -->
+  <div class="container bookbox-con">
     <div class="index-title">
-      <span class="title">必读推荐</span>
+      <span class="title">启蒙书盒</span>
     </div>
-    <div class="bookbox-list">
-      <div class="li">
-        <div class="cover">
-          <img src="https://image.snaily.com.cn/5cc980eabbc07.png">
-          <div class="new">
-            <img src="https://image.snaily.com.cn/NEW.png">
+    <div id="bookbox-wrapper" class="bookbox-wrapper">
+      <div class="bookbox-list">
+        <div class="li">
+          <div class="cover">
+            <img src="https://hbimg.huabanimg.com/89ce363952f9b407046502fafe0a6c41e4944bd4c640d-1w2k5o_fw658">
+            <div class="new">
+              <img src="https://image.snaily.com.cn/NEW.png">
+            </div>
+          </div>
+          <div class="intro">
+            <div class="book-label">
+              <span>1本原版英文绘本</span>
+              <span>10条学习内容</span>
+            </div>
+            <div class="book-title">1岁+ | 生活场景 | 布布书 | Ten Tiny Toes Are in The Jungle</div>
+            <div class="book-bottom">
+              <div class="book-price">
+                <div class="now-price">
+                  <span class="symbol">￥</span>
+                  <span class="price">49</span>
+                </div>
+                <div class="ago-price">￥49</div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="intro">
-          <div class="book-label">
-            <span>1本原版英文绘本</span>
-            <span>10条学习内容</span>
+        <div class="li">
+          <div class="cover">
+            <img src="https://hbimg.huabanimg.com/89ce363952f9b407046502fafe0a6c41e4944bd4c640d-1w2k5o_fw658">
+            <div class="new">
+              <img src="https://image.snaily.com.cn/NEW.png">
+            </div>
           </div>
-          <div class="book-title">1岁+ | 生活场景 | 布布书 | Ten Tiny Toes Are in The Jungle</div>
-          <div class="book-bottom">
-            <div class="book-price">
-              <div class="now-price">
-                <span class="symbol">￥</span>
-                <span class="price">49</span>
+          <div class="intro">
+            <div class="book-label">
+              <span>1本原版英文绘本</span>
+              <span>10条学习内容</span>
+            </div>
+            <div class="book-title">1岁+ | 生活场景 | 布布书 | Ten Tiny Toes Are in The Jungle</div>
+            <div class="book-bottom">
+              <div class="book-price">
+                <div class="now-price">
+                  <span class="symbol">￥</span>
+                  <span class="price">49</span>
+                </div>
+                <div class="ago-price">￥49</div>
               </div>
-              <div class="ago-price">￥49</div>
+            </div>
+          </div>
+        </div>
+        <div class="li">
+          <div class="cover">
+            <img src="https://hbimg.huabanimg.com/89ce363952f9b407046502fafe0a6c41e4944bd4c640d-1w2k5o_fw658">
+            <div class="new">
+              <img src="https://image.snaily.com.cn/NEW.png">
+            </div>
+          </div>
+          <div class="intro">
+            <div class="book-label">
+              <span>1本原版英文绘本</span>
+              <span>10条学习内容</span>
+            </div>
+            <div class="book-title">1岁+ | 生活场景 | 布布书 | Ten Tiny Toes Are in The Jungle</div>
+            <div class="book-bottom">
+              <div class="book-price">
+                <div class="now-price">
+                  <span class="symbol">￥</span>
+                  <span class="price">49</span>
+                </div>
+                <div class="ago-price">￥49</div>
+              </div>
             </div>
           </div>
         </div>
@@ -258,13 +339,15 @@
     </div>
   </div>
 
+  <div class="white-router"></div>
 
   <!-- Swiper JS -->
   <script src="js/swiper.min.js"></script>
   <script src="js/swiper.animate.min.js"></script>
+  <script src="js/iscroll.js"></script>
   <!-- Initialize Swiper -->
   <script>
-    var mySwiper = new Swiper('.swiper-container', {
+    var mySwiper = new Swiper('.index-banner .swiper-container', {
       on: {
         init: function () {
           swiperAnimateCache(this); //隐藏动画元素 
@@ -279,11 +362,15 @@
       autoplay: {
         delay: 3000,
         stopOnLastSlide: false,
-        disableOnInteraction: true,
+        disableOnInteraction: true
       },
       pagination: {
         el: '.swiper-pagination',
+        type: 'fraction'
       }
+    });
+    var myScroll = new IScroll('#bookbox-wrapper', {
+      scrollX: true
     });
   </script>
 

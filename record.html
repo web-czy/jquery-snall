@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="divport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>记录</title>
+  <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/index.css">
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/index.js"></script>
+</head>
+
+<body>
+
+  <!-- 底部菜单 -->
+  <div class="snail-router">
+    <div class="li choose">
+      <div class="icon">
+        <img src="images/tab/home_choose.png">
+      </div>
+      <div class="text">首页</div>
+    </div>
+    <div class="li">
+      <div class="icon">
+        <img src="images/tab/community.png">
+      </div>
+      <div class="text">社区</div>
+    </div>
+    <div class="li">
+      <div class="icon">
+        <img src="images/tab/mine.png">
+      </div>
+      <div class="text">记录</div>
+    </div>
+    <div class="li">
+      <div class="icon">
+        <img src="images/tab/VIPicon.png">
+      </div>
+      <div class="text">会员</div>
+    </div>
+    <div class="li">
+      <div class="icon">
+        <img src="images/tab/more.png">
+      </div>
+      <div class="text">我的</div>
+    </div>
+  </div>
+
+  <div class="user-info">
+    <div class="avatar">
+      <img src="http://image.snaily.com.cn/avatar-new.png">
+      <div class="icon">
+        <i class="iconfont icon-hebingxingzhuang"></i>
+      </div>
+    </div>
+    <div class="user-name">刘慧芬</div>
+    <div class="coin">
+      <i class="iconfont"></i>
+      <span>34书币</span>
+    </div>
+  </div>
+
+  <div class="statistics">
+
+  </div>
+
+  <div class="white-router"></div>
+
+  <!-- Swiper JS -->
+  <script src="js/swiper.min.js"></script>
+  <script src="js/swiper.animate.min.js"></script>
+  <script src="js/iscroll.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var mySwiper = new Swiper('.index-banner .swiper-container', {
+      on: {
+        init: function () {
+          swiperAnimateCache(this); //隐藏动画元素 
+          this.emit('slideChangeTransitionEnd'); //在初始化时触发一次slideChangeTransitionEnd事件
+        },
+        slideChangeTransitionEnd: function () {
+          swiperAnimate(this); //每个slide切换结束时运行当前slide动画
+          this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); //动画只展示一次
+        }
+      },
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        stopOnLastSlide: false,
+        disableOnInteraction: true
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction'
+      }
+    });
+    var myScroll = new IScroll('#bookbox-wrapper', {
+      scrollX: true
+    });
+  </script>
+
+</body>
+
+</html>
